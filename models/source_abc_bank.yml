@@ -9,3 +9,55 @@ sources:
 
     tables:
       - name: ABC_BANK_POSITION
+        description:  >
+          The landing table holding data imported from CSV by ABC Bank
+        columns: 
+          - name: ACCOUNTID
+            description: Code for account at ABC Bank
+            tests:
+                - not_null
+          - name: SYMBOL
+            description: Symbol of security
+            tests: 
+              - unique
+              - not_null
+          - name: DESCRIPTION
+            description: Name of security
+            tests: 
+              - not_null
+          - name: EXCHANGE
+            description: > 
+                          Short name or code
+                          just seeing if this is two lines
+            tests: 
+              - not_null
+          - name: REPORT_DATE
+            description: > 
+                          Date report was extracted
+                          just more comments
+            tests: 
+              - not_null
+          - name: QUANTITY
+            description: > 
+                          Number of securities we hold
+                          just more comments
+            tests: 
+              - not_null
+          - name: COST_BASE
+            description: > 
+                          Cost paid for securities
+                          just more comments
+            tests: 
+              - not_null
+          - name: POSITION_VALUE
+            description: > 
+                          value
+                          hi
+            tests: 
+              - not_null
+          - name: CURRENCY
+            description: > 
+                          Currency
+                          just more comments
+            tests: 
+              - not_null
